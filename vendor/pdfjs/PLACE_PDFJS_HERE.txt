@@ -1,0 +1,1 @@
+Copy pdf.min.js and pdf.worker.min.js from a pdfjs-dist 3.x release (build/ folder) into this directory.

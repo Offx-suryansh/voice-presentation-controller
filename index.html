@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Voice Presentation Controller by Suryansh Sharma: control PDF and PowerPoint presentations with voice commands, keyboard shortcuts, and a privacy-focused browser interface.">
+<meta name="author" content="Suryansh Sharma">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b0d11">
+<link rel="canonical" href="https://offx-suryansh.github.io/Voice-Presentation-Controller/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Voice Presentation Controller | Suryansh Sharma">
+<meta property="og:description" content="A browser-based presentation viewer by Suryansh Sharma. Navigate PDF and PPTX presentations with voice commands and keyboard shortcuts.">
+<meta property="og:url" content="https://offx-suryansh.github.io/Voice-Presentation-Controller/">
+<meta property="og:site_name" content="Suryansh Sharma — Projects">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Voice Presentation Controller | Suryansh Sharma">
+<meta name="twitter:description" content="Control PDF and PowerPoint presentations with voice commands and keyboard shortcuts.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://offx-suryansh.github.io/#person",
+      "name": "Suryansh Sharma",
+      "url": "https://offx-suryansh.github.io/",
+      "sameAs": [
+        "https://github.com/Offx-suryansh",
+        "https://www.linkedin.com/in/offxsuryansh/"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://offx-suryansh.github.io/Voice-Presentation-Controller/#software",
+      "name": "Voice Presentation Controller",
+      "url": "https://offx-suryansh.github.io/Voice-Presentation-Controller/",
+      "description": "A browser-based application for navigating PDF and PowerPoint presentations with voice commands and keyboard shortcuts.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any operating system with a modern web browser",
+      "author": { "@id": "https://offx-suryansh.github.io/#person" },
+      "codeRepository": "https://github.com/Offx-suryansh/Voice-Presentation-Controller",
+      "isAccessibleForFree": true
+    }
+  ]
+}
+</script>
+<title>Voice Presentation Controller | Suryansh Sharma</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><span class="logo" aria-hidden="true"></span><span>Voice Presenter</span></div>
+    <nav>
+      <button data-view="dashboard" class="active"><span class="nav-icon" aria-hidden="true">◫</span>Overview</button>
+      <button id="navOpen"><span class="nav-icon" aria-hidden="true">▤</span>Open a file</button>
+      <button data-view="history"><span class="nav-icon" aria-hidden="true">◷</span>Recent</button>
+      <button data-view="settings"><span class="nav-icon" aria-hidden="true">⚙</span>Settings</button>
+      <button data-view="about"><span class="nav-icon" aria-hidden="true">ⓘ</span>Developer</button>
+    </nav>
+    <div class="local">
+      <span class="local-label"><span class="privacy-dot" aria-hidden="true"></span>Private by design</span>
+      <p>Your presentation files stay on this device.</p>
+    </div>
+  </aside>
+
+  <main>
+    <section id="view-dashboard" class="view active">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">YOUR PRESENTATION SPACE</p>
+          <h1>Good presentations, hands-free.</h1>
+          <p class="muted">Open a deck and move through it with your voice.</p>
+        </div>
+        <span class="ready-badge"><span class="privacy-dot" aria-hidden="true"></span>Ready when you are</span>
+      </div>
+      <div id="drop" class="card drop">
+        <div class="drop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7.5 18.5h-1a4 4 0 0 1-.5-7.97A6 6 0 0 1 17.6 8.8a4.5 4.5 0 0 1 .9 8.97h-1M12 20V11m0 0-3 3m3-3 3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>Bring your next idea to the screen</h2>
+        <p class="muted">Choose a file or drop it here to get started.</p>
+        <button id="openBtn" class="primary"><span aria-hidden="true">＋</span> Open PDF / PPT</button>
+        <div class="file-types"><span>PDF</span><span>PowerPoint <b>.pptx</b></span></div>
+      </div>
+      <div class="row">
+        <div class="card voice-card"><div class="card-heading"><span class="card-symbol" aria-hidden="true">⌁</span><h3>Voice control</h3></div><div class="vstatus" aria-live="polite">● Voice Ready</div><p class="small muted">Say a command to move through your slides.</p></div>
+        <div class="card command-card">
+          <div class="card-heading"><span class="card-symbol" aria-hidden="true">⌘</span><h3>Quick commands</h3></div>
+          <div class="command"><span>Move forward</span><kbd>“Next slide”</kbd></div>
+          <div class="command"><span>Go back</span><kbd>“Previous slide”</kbd></div>
+        </div>
+      </div>
+      <div class="card shortcut-card">
+        <div><h3>Keyboard shortcuts</h3><p class="small muted">Keep presenting without reaching for the mouse.</p></div>
+        <div class="shortcut-list"><span><kbd>→</kbd> Next</span><span><kbd>←</kbd> Previous</span><span><kbd>+</kbd> Zoom in</span><span><kbd>F</kbd> Fullscreen</span></div>
+      </div>
+      <section class="card developer-card" aria-labelledby="developer-title">
+        <p class="eyebrow">ABOUT THE DEVELOPER</p>
+        <h2 id="developer-title">Built by Suryansh Sharma</h2>
+        <p class="muted">I build web projects focused on practical tools and simple user experiences. Voice Presentation Controller is a browser-based project designed to help people navigate PDF and PowerPoint presentations using voice commands and keyboard controls.</p>
+        <div class="developer-links" aria-label="Developer links">
+          <a href="https://offx-suryansh.github.io/" target="_blank" rel="noopener noreferrer">Portfolio <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Offx-suryansh" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/offxsuryansh/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Offx-suryansh/Voice-Presentation-Controller" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </section>
+
+    <section id="view-about" class="view">
+      <div class="page-heading"><div><p class="eyebrow">CREATOR & PROJECT</p><h1>About the developer</h1><p class="muted">The person and source behind Voice Presentation Controller.</p></div></div>
+      <div class="card developer-card">
+        <div class="developer-mark" aria-hidden="true">SS</div>
+        <p class="eyebrow">DEVELOPER</p>
+        <h2>Suryansh Sharma</h2>
+        <p class="muted">I build web projects focused on practical tools and straightforward user experiences. I created Voice Presentation Controller as a browser-based way to navigate PDF and PowerPoint presentations using voice commands and keyboard shortcuts.</p>
+        <h3 class="about-subheading">About this project</h3>
+        <p class="muted">The application is designed to render supported presentation files in the browser, provide voice and keyboard navigation, and keep presentation history in local browser storage. Presentation files are processed locally by the app; voice recognition behaviour can depend on your browser provider.</p>
+        <div class="developer-links">
+          <a href="https://offx-suryansh.github.io/" target="_blank" rel="noopener noreferrer">Personal portfolio <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Offx-suryansh" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/offxsuryansh/" target="_blank" rel="noopener noreferrer">LinkedIn profile <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Offx-suryansh/Voice-Presentation-Controller" target="_blank" rel="noopener noreferrer">View source code <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-history" class="view">
+      <div class="page-heading"><div><p class="eyebrow">YOUR LIBRARY</p><h1>Recent presentations</h1></div></div>
+      <p class="muted">Only filename, time and last slide are stored, on this device.</p>
+      <div id="historyList" class="card"></div>
+      <button id="clearHistory" class="secondary">Clear history</button>
+    </section>
+
+    <section id="view-settings" class="view">
+      <div class="page-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h1>Settings</h1></div></div>
+      <div class="card"><h3>Voice control</h3>
+        <label class="line"><input type="checkbox" id="setVoice"> Enable voice control</label>
+        <label class="line">Microphone <select id="setMic"><option>System default</option></select></label>
+        <p class="small muted">Browser speech recognition uses the system default microphone.</p>
+        <div class="vstatus" aria-live="polite"></div></div>
+      <div class="card"><h3>Presentation</h3>
+        <label class="line">Default zoom
+          <select id="setZoom"><option>75</option><option>100</option><option>125</option><option>150</option></select> %</label>
+        <label class="line"><input type="checkbox" id="setFs"> Start presentations in fullscreen</label></div>
+      <div class="card"><h3>Keyboard</h3><p class="small muted">→ next · ← previous · + zoom in · − zoom out · 0 reset · F fullscreen · Esc exit fullscreen</p></div>
+      <div class="card"><h3>Privacy</h3>
+        <p class="small muted">PDF and PowerPoint files are read and rendered in your browser; this application does not upload presentation files or audio recordings.<br>
+        Voice recognition uses your browser's speech recognition capability; depending on the browser, it may be processed by the browser vendor's service.<br>
+        PowerPoint font substitutions may be requested from Google Fonts when needed.</p></div>
+    </section>
+    <footer class="app-credit">
+      <span>© <span id="copyrightYear"></span> <a href="https://offx-suryansh.github.io/" target="_blank" rel="noopener noreferrer">Suryansh Sharma</a> · Created by Suryansh Sharma</span>
+      <span><a href="https://github.com/Offx-suryansh" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://www.linkedin.com/in/offxsuryansh/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://offx-suryansh.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a></span>
+    </footer>
+  </main>
+
+  <section id="viewer" hidden>
+    <header class="top">
+      <button id="backBtn" class="back-button"><span aria-hidden="true">←</span> Back</button>
+      <span id="fname" class="fname"></span>
+      <span class="vstatus" aria-live="polite"></span>
+      <button id="fsTop" title="Fullscreen (F)" aria-label="Fullscreen (F)">⛶</button>
+    </header>
+    <div id="stage" class="stage"><canvas id="canvas"></canvas></div>
+    <footer class="bottom">
+      <div class="nav">
+        <button id="prevBtn" title="Previous (←)" aria-label="Previous (←)">◀</button>
+        <span id="slideText">Slide 1 / 1</span>
+        <button id="nextBtn" title="Next (→)" aria-label="Next (→)">▶</button>
+      </div>
+      <div id="bar" class="bar" role="progressbar" aria-label="Presentation progress; click to jump to a slide" aria-valuemin="0" aria-valuemax="100" title="Click to jump"><div id="fill" class="fill"></div></div>
+      <div class="zoom">
+        <button id="zoomOut" title="Zoom out (-)" aria-label="Zoom out (-)">−</button>
+        <span id="zoomText">100%</span>
+        <button id="zoomIn" title="Zoom in (+)" aria-label="Zoom in (+)">+</button>
+        <button id="fsBtn" title="Fullscreen (F)" aria-label="Fullscreen (F)">⛶</button>
+      </div>
+    </footer>
+  </section>
+</div>
+<input type="file" id="file" accept="application/pdf,.pdf,application/vnd.openxmlformats-officedocument.presentationml.presentation,.pptx" hidden>
+<script src="vendor/pdfjs/pdf.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

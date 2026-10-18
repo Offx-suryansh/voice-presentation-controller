@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://offx-suryansh.github.io/Voice-Presentation-Controller/sitemap.xml
